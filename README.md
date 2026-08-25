@@ -14,24 +14,24 @@ The CV is available [here](https://danielvartan.com/cv).
 
 ## Usage
 
-This CV was developed using the [R](https://www.r-project.org/) programming language, along with the [`rmarkdown`](https://rmarkdown.rstudio.com/), [`pagedown`](https://github.com/rstudio/pagedown), and [`datadrivencv`](https://github.com/nstrayer/datadrivencv) packages. To ensure reproducibility, the [`renv`](https://rstudio.github.io/renv/) package was used to manage and restore the R environment.
+This CV is developed using the [R](https://www.r-project.org/) programming language, along with the [`rmarkdown`](https://rmarkdown.rstudio.com/), [`pagedown`](https://github.com/rstudio/pagedown), and [`datadrivencv`](https://github.com/nstrayer/datadrivencv) packages. To ensure reproducibility, the [`renv`](https://rstudio.github.io/renv/) package is used to manage and restore the R environment.
 
 After installing all the dependencies mentioned above, follow these steps to reproduce the results:
 
 1. **Clone** this repository to your local machine.
 2. **Open** the project in your preferred [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment).
-3. **Install package dependencies** by running [`renv::restore()`](https://rstudio.github.io/renv/reference/restore.html) in the R console. This will install all required software dependencies.
+3. **Install package dependencies** by running [`renv::restore()`](https://rstudio.github.io/renv/reference/restore.html) in the R console.
 4. **Open** [`index.Rmd`](index.Rmd) and run the code as described in the document.
 
 ## Rendering
 
-The rendering process uses the [`rmarkdown`](https://rmarkdown.rstudio.com/) and [`chromote`](https://rstudio.github.io/chromote/) R packages, along with scripts that can be found at [`render.R`](R/render.R). Make sure you meet all the requirements listed in the [Usage](#usage) section before moving on.
+The rendering process uses the [`rmarkdown`](https://rmarkdown.rstudio.com/) and [`chromote`](https://rstudio.github.io/chromote/) R packages along with scripts that can be found at [`render.R`](R/render.R). Make sure you meet all the requirements listed in the [Usage](#usage) section before moving on.
 
 By running the [`render.R`](R/render.R) script, you will initiate the rendering process for both the HTML and PDF versions of the CV. Once completed, the rendered files will be available in the [`docs`](docs) folder.
 
 ## Data
 
-The data used to populate this CV are stored in a public [Google Sheet](https://docs.google.com/spreadsheets/) and can be accessed [here](https://docs.google.com/spreadsheets/d/1wkMEjKuNYpWmEVEdnisqhrGdSeEw-wYqAEmOAcZPhWk/edit?usp=sharing).
+Data used to populate this CV are stored in a public [Google Sheet](https://docs.google.com/spreadsheets/) and can be accessed [here](https://docs.google.com/spreadsheets/d/1wkMEjKuNYpWmEVEdnisqhrGdSeEw-wYqAEmOAcZPhWk/edit?usp=sharing).
 
 ## License
 
