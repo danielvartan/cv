@@ -6,4 +6,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/). The proj
 
 ## v0.1.0.9000 (development version)
 
-- Added a `CHANGELOG.md` file to track notable changes.
+### Added
+
+- `CHANGELOG.md` file to track notable changes.
