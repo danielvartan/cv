@@ -48,6 +48,7 @@
   "codeRepository": "https://github.com/danielvartan/cv",
   "issueTracker": "https://github.com/danielvartan/cv/issues",
   "relatedLink": [
+    "https://doi.org/10.5281/zenodo.22090107",
     "https://danielvartan.com/cv"
   ],
   "runtimePlatform": "R",
@@ -65,5 +66,5 @@
   "developmentStatus": "active",
   "readme": "https://github.com/danielvartan/cv/blob/main/README.md",
   "releaseNotes": "https://github.com/danielvartan/cv/blob/main/CHANGELOG.md",
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
