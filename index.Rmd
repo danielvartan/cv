@@ -1,0 +1,212 @@
+---
+title: "Daniel Vartanian's CV"
+author: Daniel Vartanian
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: false
+output:
+  pagedown::html_resume:
+    css: ["resume", "css/dd_cv.css", "css/custom.css"]
+    self_contained: true
+---
+
+<!-- See <https://pagedown.rbind.io/#resume> to learn more. -->
+
+```{r load-packages, include=FALSE}
+library(beepr)
+library(checkmate)
+library(cli)
+library(datadrivencv)
+library(dplyr)
+library(glue)
+library(googlesheets4)
+library(here)
+library(knitr)
+library(lubridate)
+library(magrittr)
+library(metathis)
+library(pagedown)
+library(purrr)
+library(rmarkdown)
+library(stringr)
+library(tibble)
+library(tidyr)
+library(withr)
+```
+
+```{r set-chunk-options, include=FALSE}
+opts_chunk$set(
+  results = "asis",
+  echo = FALSE
+)
+```
+
+```{r load-scripts, include=FALSE}
+here("R", "get_data.R") |> source()
+here("R", "tidy_data.R") |> source()
+here("R", "print_data.R") |> source()
+```
+
+```{r set-metadata, echo=FALSE, message=FALSE, warning=FALSE}
+meta() |>
+  meta_name("github-repo" = "danielvartan/cv") |>
+  meta_social(
+    title = "Daniel Vartanian's CV",
+    url = "https://danielvartan.com/cv",
+    og_type = "website",
+    og_author = "Daniel Vartanian",
+    og_locale = "en_US.UTF-8"
+  )
+```
+
+<!-- styles: start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<!-- styles: end -->
+
+<!-- scripts: start -->
+<script src="https://kit.fontawesome.com/ddcb976bc4.js" crossorigin="anonymous"></script>
+<!-- scripts: end -->
+
+```{r process-data-1, include = FALSE}
+ss <- paste0(
+  "https://docs.google.com/spreadsheets/d/",
+  "1wkMEjKuNYpWmEVEdnisqhrGdSeEw-wYqAEmOAcZPhWk"
+)
+```
+
+```{r process-data-2, include = FALSE}
+data <-
+  ss |>
+  get_data() |>
+  tidy_data()
+```
+
+```{r process-data-3, include = FALSE}
+data |> pluck("experience") |> glimpse()
+```
+
+# Aside
+
+![Daniel Vartanian](https://avatars.githubusercontent.com/u/29462472?v=4){width=100% style='border-radius: 50%; text-align: center;'}
+
+```{r render-cv-aside-1}
+if (isTRUE(params$pdf_mode)) {
+  cat(
+    "<p style='font-size: 0.65rem; text-align: center;'>",
+    "Access this CV online at: ",
+    "[danielvartan.com/cv]",
+    "(https://danielvartan.com/cv)",
+    "</p>",
+    sep = ""
+  )
+} else {
+  cat(
+    "<p style='text-align: center;'>",
+    "[<i class = 'fas fa-download'></i>&nbsp; Download this CV]",
+    "(pdf/Daniel%20Vartanian.pdf)",
+    "</p>",
+    sep = ""
+  )
+}
+```
+
+::: {style="text-align: left; padding-top:20px;"}
+<h2 style="padding-bottom: 5px;">Contact</h2>
+
+```{r}
+data |> print_data("contact")
+```
+
+<h2 style="padding-top: 15px; padding-bottom: 15px;">References</h2>
+
+```{r}
+data |> print_data("references")
+```
+:::
+
+## Disclaimer {#disclaimer}
+
+Developed with <br>[pagedown](https://github.com/rstudio/pagedown) and [datadrivencv](https://github.com/nstrayer/datadrivencv)<br> [R](https://www.r-project.org) packages.
+
+Source code available at:<br>[github.com/danielvartan/cv](https://github.com/danielvartan/cv)
+
+Last updated on `r with_locale(c("LC_TIME" = "en_US.UTF-8"), format(Sys.Date(), "%B %e, %Y"))`.
+
+# Main
+
+## Daniel Vartanian {#title}
+
+::: {style="font-size: 0.7rem;"}
+```{r render-cv-introduction}
+data |> print_data("introduction")
+```
+:::
+
+## Work Experience {#experience data-icon=laptop}
+
+```{r render-cv-work-experience}
+data |> print_data("work_experience")
+```
+
+::: {.aside style="top: 0px;"}
+<h2>Affiliations</h2>
+
+```{r render-cv-aside-2-1}
+data |> print_data("affiliations")
+```
+
+<h2 style="padding-top: 15px;">Languages</h2>
+
+<p style="margin-top: 5px"><i class="fa-solid fa-crow"></i>&nbsp;&nbsp; [danielvartan](https://www.duolingo.com/profile/danielvartan)</p>
+
+```{r render-cv-aside-2-2}
+data |> print_data("languages")
+```
+:::
+
+## Education {#education data-icon=graduation-cap}
+
+```{r render-cv-education}
+data |> print_data("education")
+```
+
+## Selected Software Projects {#software data-icon=box-open}
+
+```{r render-cv-software-development}
+data |> print_data("software_development")
+```
+
+::: {.aside style="top: 0px;"}
+<h2>Programming Languages</h2>
+
+<p style="margin-top: 5px"><i class="fa-brands fa-github"></i>&nbsp;&nbsp; [danielvartan](https://github.com/danielvartan)</p>
+
+```{r render-cv-aside-3}
+data |> print_data("programming_languages")
+```
+:::
+
+## Teaching Experience {#teaching data-icon=chalkboard-user}
+
+```{r render-cv-teaching-experience}
+data |> print_data("teaching_experience")
+```
+
+## Honors, Awards & Fellowships {#funding data-icon=medal}
+
+```{r render-cv-funding}
+data |> print_data("funding")
+```
+
+## Selected Outreach Projects {#outreach data-icon=users}
+
+```{r render-cv-outreach}
+data |> print_data("outreach")
+```
+
+## Selected Publications {#publications data-icon=book}
+
+```{r render-cv-publications}
+data |> print_data("publications")
+```

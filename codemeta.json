@@ -1,0 +1,70 @@
+{
+  "@context": "https://w3id.org/codemeta/3.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "cv",
+  "dateCreated": "2026-08-24",
+  "applicationCategory": "Research",
+  "applicationSubCategory": "Curriculum Vitae",
+  "name": "Curriculum vitae",
+  "author": [
+    {
+      "@type": "Person",
+      "familyName": "Vartanian",
+      "givenName": "Daniel",
+      "email": "danielvartan@proton.me",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "University of São Paulo",
+        "url": "https://www.usp.br"
+      },
+      "@id": "https://orcid.org/0000-0001-7782-759X"
+    }
+  ],
+  "copyrightHolder": {
+    "@type": "Person",
+    "familyName": "Vartanian",
+    "givenName": "Daniel",
+    "email": "danielvartan@proton.me",
+    "@id": "https://orcid.org/0000-0001-7782-759X"
+  },
+  "maintainer": {
+    "@type": "Person",
+    "familyName": "Vartanian",
+    "givenName": "Daniel",
+    "email": "danielvartan@proton.me",
+    "@id": "https://orcid.org/0000-0001-7782-759X"
+  },
+  "description": "Source files for generating my main curriculum vitae (CV).",
+  "keywords": [
+    "Resume",
+    "CV",
+    "Curriculum Vitae",
+    "Open Source",
+    "rmarkdown",
+    "pagedown",
+    "datadrivencv"
+  ],
+  "license": "https://www.gnu.org/licenses/gpl-3.0",
+  "codeRepository": "https://github.com/danielvartan/cv",
+  "issueTracker": "https://github.com/danielvartan/cv/issues",
+  "relatedLink": [
+    "https://doi.org/10.5281/zenodo.18666383",
+    "https://danielvartan.com/cv"
+  ],
+  "runtimePlatform": "R",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "4.6.1",
+    "url": "https://www.r-project.org/"
+  },
+  "operatingSystem": [
+    "Linux",
+    "macOS",
+    "Windows"
+  ],
+  "developmentStatus": "active",
+  "readme": "https://github.com/danielvartan/cv/blob/main/README.md",
+  "releaseNotes": "https://github.com/danielvartan/cv/blob/main/CHANGELOG.md",
+  "version": "2.0.1.9000"
+}

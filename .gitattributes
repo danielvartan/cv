@@ -1,0 +1,7 @@
+*.Rmd linguist-detectable
+*.Rmd linguist-language=R
+
+docs/** linguist-documentation
+css/** linguist-documentation
+
+.vscode/** linguist-generated
