@@ -42,7 +42,8 @@
     "Open Source",
     "rmarkdown",
     "pagedown",
-    "datadrivencv"
+    "datadrivencv",
+    "chromote"
   ],
   "license": "https://www.gnu.org/licenses/gpl-3.0",
   "codeRepository": "https://github.com/danielvartan/cv",
@@ -66,5 +67,5 @@
   "developmentStatus": "active",
   "readme": "https://github.com/danielvartan/cv/blob/main/README.md",
   "releaseNotes": "https://github.com/danielvartan/cv/blob/main/CHANGELOG.md",
-  "version": "2.0.1.9000"
+  "version": "0.1.0.9000"
 }
