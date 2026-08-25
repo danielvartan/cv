@@ -12,6 +12,10 @@ This repository provides the source files for generating my curriculum vitae ([C
 
 The CV is available [here](https://danielvartan.com/cv).
 
+## Data Availability
+
+Data used to populate this CV are stored in a public [Google Sheet](https://docs.google.com/spreadsheets/) and can be accessed [here](https://docs.google.com/spreadsheets/d/1wkMEjKuNYpWmEVEdnisqhrGdSeEw-wYqAEmOAcZPhWk/edit?usp=sharing).
+
 ## Usage
 
 This CV is developed using the [R](https://www.r-project.org/) programming language, along with the [`rmarkdown`](https://rmarkdown.rstudio.com/), [`pagedown`](https://github.com/rstudio/pagedown), and [`datadrivencv`](https://github.com/nstrayer/datadrivencv) packages. To ensure reproducibility, the [`renv`](https://rstudio.github.io/renv/) package is used to manage and restore the R environment.
@@ -28,10 +32,6 @@ After installing all the dependencies mentioned above, follow these steps to rep
 The rendering process uses the [`rmarkdown`](https://rmarkdown.rstudio.com/) and [`chromote`](https://rstudio.github.io/chromote/) R packages along with scripts that can be found at [`render.R`](R/render.R). Make sure you meet all the requirements listed in the [Usage](#usage) section before moving on.
 
 By running the [`render.R`](R/render.R) script, you will initiate the rendering process for both the HTML and PDF versions of the CV. Once completed, the rendered files will be available in the [`docs`](docs) folder.
-
-## Data
-
-Data used to populate this CV are stored in a public [Google Sheet](https://docs.google.com/spreadsheets/) and can be accessed [here](https://docs.google.com/spreadsheets/d/1wkMEjKuNYpWmEVEdnisqhrGdSeEw-wYqAEmOAcZPhWk/edit?usp=sharing).
 
 ## License
 
