@@ -9,11 +9,11 @@ library(pdftools)
 library(purrr)
 library(rmarkdown)
 
-# Set Chrome Path for `chromote` -----
+# Set `chromote` -----
 
-Sys.setenv(
-  CHROMOTE_CHROME = "/usr/bin/google-chrome-stable"
-)
+local_chrome_version("latest-stable", binary = "chrome")
+
+options(chromote.timeout = 100)
 
 # Render CV -----
 

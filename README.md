@@ -2,16 +2,13 @@
 
 <!-- badges: start -->
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![DOI Badge](https://img.shields.io/badge/doi-10.5281/zenodo.18666383-1284C5.svg)](https://doi.org/10.5281/zenodo.18666383)
-[![FAIR checklist badge](https://img.shields.io/badge/fairsoftwarechecklist.net--00a7d9.png)](https://fairsoftwarechecklist.net/v0.2?f=21&a=32113&i=32300&r=123)
-[![fair-software.eu](https://img.shields.io/badge/fair--software.eu-%E2%97%8F%20%E2%97%8F%20%E2%97%8F%20%E2%97%8F%20%E2%97%8B-yellow)](https://fair-software.eu)
 [![License: GPLv3](https://img.shields.io/badge/license-GPLv3-bd0000.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/license-CC_BY--NC--SA_4.0-lightgrey.svg)](https:/n/creativecommons.org/licenses/by-nc-sa/4.0/)
 <!-- badges: end -->
 
 ## Overview
 
-This repository provides the source files for generating my main curriculum vitae ([CV](https://en.wikipedia.org/wiki/Curriculum_vitae)).
+This repository provides the source files for generating my curriculum vitae ([CV](https://en.wikipedia.org/wiki/Curriculum_vitae)).
 
 The CV is available [here](https://danielvartan.com/cv).
 
@@ -28,7 +25,7 @@ After installing all the dependencies mentioned above, follow these steps to rep
 
 ## Rendering
 
-The rendering process uses [`rmarkdown`](https://rmarkdown.rstudio.com/) along with scripts that can be found at [`render.R`](R/render.R). Make sure you meet all the requirements listed in the [Usage](#usage) section before moving on.
+The rendering process uses the [`rmarkdown`](https://rmarkdown.rstudio.com/) and [`chromote`](https://rstudio.github.io/chromote/) R packages, along with scripts that can be found at [`render.R`](R/render.R). Make sure you meet all the requirements listed in the [Usage](#usage) section before moving on.
 
 By running the [`render.R`](R/render.R) script, you will initiate the rendering process for both the HTML and PDF versions of the CV. Once completed, the rendered files will be available in the [`docs`](docs) folder.
 
