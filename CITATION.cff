@@ -20,9 +20,6 @@ keywords:
   - datadrivencv
   - chromote
 identifiers:
-  - type: doi
-    value: 10.5281/zenodo.18666383
-    description: Zenodo Record
   - type: url
     value: https://danielvartan.com/cv
     description: Curriculum Vitae Website
@@ -31,4 +28,4 @@ identifiers:
     description: GitHub Code Repository
 repository-code: https://github.com/danielvartan/cv
 license: GPL-3.0-or-later
-version: 0.1.0.9000
+version: 1.0.0
