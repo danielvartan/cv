@@ -89,7 +89,15 @@ data |> pluck("experience") |> glimpse()
 
 # Aside
 
-![Daniel Vartanian](https://avatars.githubusercontent.com/u/29462472?v=4){width=100% style='border-radius: 50%; text-align: center;'}
+![Daniel Vartanian](images/2026-08-28.png){width=100% style='border-radius: 50%; text-align: center; background-color: #ffddd2'}
+
+```{r include=FALSE}
+colorspace::lighten("#ea7701", 0.75)
+```
+
+```{r include=FALSE}
+colorspace::lighten("#142a32", 0.95)
+```
 
 ```{r render-cv-aside-1}
 if (isTRUE(params$pdf_mode)) {
