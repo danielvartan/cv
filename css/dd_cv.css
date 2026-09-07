@@ -1,3 +1,5 @@
+/* Typefaces----- */
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap");
 
 /* Main text is monserrat*/
@@ -116,8 +118,8 @@ sup {
 
 /* Add styles for little cards  */
 .info-card{
-  width: 220px;    
-  float: left;    
+  width: 220px;
+  float: left;
   padding: 0.5rem;
   margin: 0.5rem;
   box-shadow: 1px 1px 4px black;

@@ -94,7 +94,7 @@ data |> pluck("experience") |> glimpse()
 ```{r render-cv-aside-1}
 if (isTRUE(params$pdf_mode)) {
   cat(
-    "<p style='font-size: 0.65rem; text-align: center;'>",
+    "<p style='font-size: 0.7rem; text-align: center;'>",
     "Access this CV online at: ",
     "[danielvartan.com/cv]",
     "(https://danielvartan.com/cv)",
@@ -138,11 +138,15 @@ Last updated on `r with_locale(c("LC_TIME" = "en_US.UTF-8"), format(Sys.Date(), 
 
 ## Daniel Vartanian {#title}
 
-::: {style="font-size: 0.7rem;"}
 ```{r render-cv-introduction}
 data |> print_data("introduction")
 ```
-:::
+
+## Education {#education data-icon=graduation-cap}
+
+```{r render-cv-education}
+data |> print_data("education")
+```
 
 ## Work Experience {#experience data-icon=laptop}
 
@@ -165,12 +169,6 @@ data |> print_data("affiliations")
 data |> print_data("languages")
 ```
 :::
-
-## Education {#education data-icon=graduation-cap}
-
-```{r render-cv-education}
-data |> print_data("education")
-```
 
 ## Selected Software Projects {#software data-icon=box-open}
 

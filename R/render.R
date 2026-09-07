@@ -17,62 +17,74 @@ options(chromote.timeout = 100)
 
 # Render CV -----
 
-cli_progress_step("Rendering the HTML version of the CV")
+render_cv_html <- function() {
+  cli_progress_step("Rendering the HTML version of the CV")
 
-html_file <- here("docs", "index.html")
+  html_file <- here("docs", "index.html")
 
-here("index.Rmd") |>
-  rmarkdown::render(
-    params = list(pdf_mode = FALSE),
-    output_file = html_file
-  )
+  here("index.Rmd") |>
+    rmarkdown::render(
+      params = list(pdf_mode = FALSE),
+      output_file = html_file
+    )
 
-cli_process_done()
+  cli_process_done()
 
-Sys.sleep(1)
-beep(1)
+  Sys.sleep(1)
+  beep(1)
 
-cli_progress_step("Rendering the PDF version of the CV")
+  invisible()
+}
 
-html_pdf_file <- here("docs", "pdf", "index_pdf.html")
+render_cv_html()
 
-here("index.Rmd") |>
-  rmarkdown::render(
-    params = list(pdf_mode = TRUE),
-    output_file = html_pdf_file
-  )
+render_cv_pdf <- function() {
+  cli_progress_step("Rendering the PDF version of the CV")
 
-cli_process_done()
+  html_pdf_file <- here("docs", "pdf", "index_pdf.html")
 
-Sys.sleep(1)
-beep(1)
+  here("index.Rmd") |>
+    rmarkdown::render(
+      params = list(pdf_mode = TRUE),
+      output_file = html_pdf_file
+    )
 
-cli_progress_step("Creating the CV PDF file")
+  cli_process_done()
 
-pdf_file <- here("docs", "pdf", "Daniel Vartanian.pdf")
+  Sys.sleep(1)
+  beep(1)
 
-session <- ChromoteSession$new()
+  cli_progress_step("Creating the CV PDF file")
 
-html_pdf_file %>%
-  paste0("file://", .) |>
-  session$go_to(delay = 5)
+  pdf_file <- here("docs", "pdf", "Daniel Vartanian.pdf")
 
-pdf_file |>
-  session$screenshot_pdf(
-    pagesize = "a4",
-    margins = 0,
-    units = "cm",
-    landscape = FALSE,
-    display_header_footer = TRUE,
-    print_background = TRUE,
-    scale = 1,
-    wait_ = TRUE
-  )
+  session <- ChromoteSession$new()
 
-cli_process_done()
+  html_pdf_file %>%
+    paste0("file://", .) |>
+    session$go_to(delay = 5)
 
-Sys.sleep(1)
-beep(1)
+  pdf_file |>
+    session$screenshot_pdf(
+      pagesize = "a4",
+      margins = 0,
+      units = "cm",
+      landscape = FALSE,
+      display_header_footer = TRUE,
+      print_background = TRUE,
+      scale = 1,
+      wait_ = TRUE
+    )
+
+  cli_process_done()
+
+  Sys.sleep(1)
+  beep(1)
+
+  invisible()
+}
+
+render_cv_pdf()
 
 # Check the Number of Pages in the PDF File -----
 
