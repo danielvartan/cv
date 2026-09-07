@@ -88,6 +88,8 @@ render_cv_pdf()
 
 # Check the Number of Pages in the PDF File -----
 
+pdf_file <- here("docs", "pdf", "Daniel Vartanian.pdf")
+
 pdf_pages <-
   pdf_file |>
   pdf_info() |>
